@@ -62,8 +62,6 @@ app.get('/', function(req, res){
     });
 });
 
-app.get('/users', user.list);
-
 app.get('/getHighScores', function(req,res){
    s
     User.getTopHighscore(function(err, collection){
@@ -76,37 +74,6 @@ app.get('/getHighScores', function(req,res){
             res.send(collection);
         }
     });
-});
-
-app.get('/form', function(req, res) {
-    fs.readFile('./form.html', function(error, content) {
-        if (error) {
-            res.writeHead(500);
-            res.end();
-        }else{
-            res.writeHead(200, { 'Content-Type': 'text/html' });
-            res.end('<div class="center"><div>'+ formString +'</div></div>' + content, 'utf-8'); 
-            formString='';       
-        }
-
-
-    });
-    
-});
-
-app.post('/guess', function(req, res){
-    var guess = req.body.guessInput;
-    if(guess != text){
-        console.log("Your Score is: " + score);
-
-        res.redirect('/gameOver');
-    }
-    else{
-        score+=1;
-        currText = '';
-        makeid();
-        res.redirect('/bonify');
-    }
 });
 
 app.post('/search', function(req, res){
