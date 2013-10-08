@@ -152,7 +152,3 @@ legend {
 	font-style: bold;
 	font-size: 14pt;
 }
-
-.fontsize14{
-	font-size: 14pt;
-}

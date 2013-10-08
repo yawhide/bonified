@@ -15,7 +15,7 @@ window.JST['index'] = _.template(
 "</p>"+
 "<p>"+
 "<a href='#/bonify'>"+
-"<button class='btn btn-large'>Excited to get BONIFIED?</button>"+
+"<button class='btn btn-large'>Get BONIFIED?</button>"+
 "</a>"+
 "</p>"+
 "<h4>Extras</h4>"+
@@ -25,46 +25,11 @@ window.JST['index'] = _.template(
 "<span class='label'>Languages used:</span>"+
 "Node.js, Express.js, Html5, Javascript, Mongoose, MongoDB <br/>"+
 "<span class='label'>Instructions:</span>"+
-"Click 'Excited to get BONIFIED?' to get started. This is a memory game where you have to remember the letters you already have typed while constantly added one more letter. This game is case insensitive<br/>"+
+"Click 'Get BONIFIED?' to get started. Memorize the letter sequence that have been presented to you. The longer the sequence, the higher the score. This game is case insensitive<br/>"+
 "</div>"+
 "</div>"
 );
 
-window.JST['highscore'] = _.template(
-    "<% var viewportWidth = $(window).width();%>"+
-"<%if( viewportWidth >500){%>"+
-"<div class='center'>"+
-"<%}%>"+
-    "<div><h3>HIGHSCORES</h3></div>"+
-    "<table class='table table-bordered table-striped table-condensed'>"+
-    "<% _.each(highscoreArray, function(Array) { %>"+
-    "<tr><td><%=Array[0]%></td><td><%=Array[1]%></td></tr>"+
-     "<% }); %>"+
-    "</table></div>"+
-"<div class='center'>"+
-"<div class='center'>"+
-"<h3>Welcome to Bonified</h3>"+
-"<p>"+
-"<a href='#/highscore'>"+
-"<button class='btn btn-large'>Check out the High Scores</button>"+
-"</a>"+
-"</p>"+
-"<p>"+
-"<a href='#/bonify'>"+
-"<button class='btn btn-large'>Excited to get BONIFIED?</button>"+
-"</a>"+
-"</p>"+
-"<h4>Extras</h4>"+
-"<div class='xin'>"+
-"<span class='label'>Athours:</span>"+
-"Darren and Stefan <br/>"+
-"<span class='label'>Languages used:</span>"+
-"Node.js, Express.js, Html5, Javascript, Mongoose, MongoDB <br/>"+
-"<span class='label'>Instructions:</span>"+
-"Click 'Excited to get BONIFIED?' to get started. This is a memory game where you have to remember the letters you already have typed while constantly added one more letter. There is no case sensitivity<br/>"+
-"</div>"+
-"</div>"
-);
 
 window.JST['highscore'] = _.template(
 "<div class='center'><div><h3>HIGHSCORES</h3></div>"+
@@ -94,10 +59,10 @@ window.JST['bonify'] = _.template(
 "<% var viewportWidth = $(window).width();%>"+
 "<%if( viewportWidth >500){%>"+
 "<div class='center'>"+
-"<%}%>"+
+"<% } %>"+
 "<h3> LETS GET BONIFIED!!! </h3>"+
-"<p><%= currText %></p>"+
-"<p>Your current score is: <%= score %></p>"+
+"<p class='letter'><%= currText %></p>"+
+"<p class='fontsize14'>Your current score is: <span class='score'><%= score %></span></p>"+
 "<form class='guessLetter'>"+
 "<div>"+
 "<input type='text' id='guessInput' placeholder='input your guess here' autocomplete='off' autofocus ></input>"+
