@@ -20,7 +20,7 @@ window.JST['index'] = _.template(
 "</p>"+
 "<h4>Extras</h4>"+
 "<div class='xin'>"+
-"<span class='label'>Athours:</span>"+
+"<span class='label'>Authors:</span>"+
 "Darren and Stefan <br/>"+
 "<span class='label'>Languages used:</span>"+
 "Node.js, Express.js, Html5, Javascript, Mongoose, MongoDB <br/>"+
