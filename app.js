@@ -36,7 +36,7 @@ if ('development' == app.get('env')) {
 
 
 app.get('/', function(req, res){
-    fs.readFile('./index.html', function(error, content){
+    fs.readFile('./public/index.html', function(error, content){
         if(error){
             res.writeHead(500);
             res.end();
