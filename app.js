@@ -10,30 +10,21 @@
  , path = require('path')
  , User = require('./models/User.js')
  , fs = require('fs')
+ , $ = require('jquery')
  , _ = require('underscore')
- , Backbone = require('backbone');
+ , Backbone = require('backbone')
+ , exphbs = require('express3-handlebars');
 
  var app = express();
 
 //conf.ports.server;
-var allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
 
-    // intercept OPTIONS method
-    if ('OPTIONS' == req.method) {
-      res.send(200);
-    }
-    else {
-      next();
-    }
-};
 // all environments
-app.use(allowCrossDomain);
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
+//app.set('view engine', 'jade');
+app.engine('handlebars', exphbs({defaultLayout : 'main'}));
+app.set('view engine', 'handlebars');
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
@@ -41,21 +32,23 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(__dirname + '/public'));
 
-
-
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-
 app.get('/', function(req, res){
+    console.log(req.theScores);
+
     fs.readFile('./public/index.html', function(error, content){
+
+
         if(error){
             res.writeHead(500);
             res.end();
         }
         else{
+
             res.writeHead(200, { 'Content-Type': 'text/html'});
             res.end(content, 'utf-8');
         }
@@ -98,7 +91,7 @@ app.post('/signup', function(req, res) {
     var highscore = req.body.highscore;
     console.log(highscore);
     User.addUser(username, highscore, function(err, user) {
-        if (err) {   
+        if (err!=null) {   
             console.log(err);    
             res.send(err);
         }
