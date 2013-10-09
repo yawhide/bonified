@@ -90,9 +90,9 @@
             <button class='btn'>New game?</button>
           </a>
           <table class='table table-bordered table-striped table-condensed'>
-            {{#each highscoreArray}}
-            <tr><td>{{this.username}}</td><td>{{this.highscore}}</td></tr>
-            {{/each}}
+            {{#highscoreArray}}
+            <tr><td>{{username}}</td><td>{{highscore}}</td></tr>
+            {{/highscoreArray}}
           </table>
         </div>
       </script>
@@ -161,6 +161,8 @@
         <script src="lib/underscore.js"></script>
         <script src="lib/backbone.js"></script>
         <script src="lib/handlebars_1.0.js"></script>
+        <script src="lib/mustache.js"></script>
+
 
 
         <script src="js/models.js"></script>
