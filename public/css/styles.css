@@ -1,6 +1,7 @@
 body{
     text-decoration: none;
     background-color: #f4f4f4;
+    padding-top: 60px;
 }
 a{
     text-decoration: none
@@ -18,6 +19,7 @@ a:hover {
     width: 225px;
     margin-right: auto;
     text-align: center;
+    margin-top:auto;
 }
 
 .xin {
@@ -50,6 +52,9 @@ a:hover {
   background-image: none;
   background-repeat: no-repeat;
   filter: none;
+}
+@media screen and (max-width: 768px) {
+    body { padding-top: 0px; }
 }
 
 .gbutton:hover {
