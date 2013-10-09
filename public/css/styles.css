@@ -53,12 +53,7 @@ a:hover {
 }
 
 .gbutton:hover {
-    -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    -moz-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    -ms-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    -o-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    cursor: pointer;
+     cursor: pointer;
 }
 
 .gbutton {
@@ -91,7 +86,84 @@ a:hover {
 }
 
 .gbutton:active{
-    
+   display: inline-block;
+    background: #4162a8;
+    border-top: 1px solid #38538c;
+    border-right: 1px solid #1f2d4d;
+    border-bottom: 1px solid #151e33;
+    border-lefst: 1px solid #1f2d4d;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+   color: #fff;
+    font: bold 14px "helvetica neue", helvetica, arial, sans-serif;
+    line-height: 1;
+    margin-bottom: 15px;
+    padding: 8px 0 10px 0;
+    text-align: center;
+    text-shadow: 0px -1px 1px #1e2d4d;
+    text-decoration: none;
+    width: 225px;
+    -webkit-background-clip: padding-box;
+}
+
+.rbutton:hover {
+     cursor: pointer;
+}
+
+.rbutton {
+    display: inline-block;
+    background: #f7f7f9;
+    border-top: 1px solid #38538c;
+    border-right: 1px solid #1f2d4d;
+    border-bottom: 1px solid #151e33;
+    border-lefst: 1px solid #1f2d4d;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 10px 1px #CACFDA, 0px 1px 0 #747B8B, 0 6px 0px #4D5C7A, 0 8px 4px 1px #929090;;
+    -moz-box-shadow: inset 0 1px 10px 1px #CACFDA, 0px 1px 0 #747B8B, 0 6px 0px #4D5C7A, 0 8px 4px 1px #929090;
+    -ms-box-shadow: inset 0 1px 10px 1px #CACFDA, 0px 1px 0 #747B8B, 0 6px 0px #4D5C7A, 0 8px 4px 1px #929090;
+    -o-box-shadow: inset 0 1px 10px 1px #CACFDA, 0px 1px 0 #747B8B, 0 6px 0px #4D5C7A, 0 8px 4px 1px #929090;
+    box-shadow: inset 0 1px 10px 1px #CACFDA, 0px 1px 0 #747B8B, 0 6px 0px #4D5C7A, 0 8px 4px 1px #929090;
+    color: #000;
+    font: bold 14px "helvetica neue", helvetica, arial, sans-serif;
+    line-height: 1;
+    margin-bottom: 15px;
+    padding: 8px 0 10px 0;
+    text-align: center;
+    text-shadow: 0px -1px 1px #DCDFE2;
+    text-decoration: none;
+    width: 225px;
+    -webkit-background-clip: padding-box;
+}
+
+.rbutton:active{
+   display: inline-block;
+    background: #f7f7f9;
+    border-top: 1px solid #38538c;
+    border-right: 1px solid #1f2d4d;
+    border-bottom: 1px solid #151e33;
+    border-lefst: 1px solid #1f2d4d;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+   color: #000;
+    font: bold 14px "helvetica neue", helvetica, arial, sans-serif;
+    line-height: 1;
+    margin-bottom: 15px;
+    padding: 8px 0 10px 0;
+    text-align: center;
+    text-shadow: 0px -1px 1px #DCDFE2;
+    text-decoration: none;
+    width: 225px;
+    -webkit-background-clip: padding-box;
 }
 
 
