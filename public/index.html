@@ -66,13 +66,12 @@
         Darren and Stefan <br/>
         <span class='label'>Languages used:</span>
         Node.js, Express.js, Html5, Javascript, Mongoose, MongoDB <br/>
-        <span class='label'>Instructions:</span>
-        Click 'Get bonified?' to get started. This is a memory game where you have to remember the letters you already have typed while constantly added one more letter. <br/>    </div>
       </div>
-    </script>
+    </div>
+  </script>
 
 
-    <script id="highscore_template" type="text/x-handlebars-template">
+  <script id="highscore_template" type="text/x-handlebars-template">
       
         <div class='center'>
           <h3>HIGHSCORES</h3>
@@ -81,7 +80,7 @@
               <label>Search for your highscore:</label>
               <input type='text' id='username' placeholder='enter your username' autocomplete='off' autofocus class='input-block-level'/><br/>
             </div>
-            <button id='searchButton' value='Search!' class='btn btn-primary' >Search!</button>
+            <button id='searchButton' value='Search!' class='btn btn-primary gbutton' >Search!</button>
           </form>
           <a href='#/bonify'>
             <button class='btn'>New game?</button>
@@ -92,10 +91,10 @@
             {{/highscoreArray}}
           </table>
         </div>
-      </script>
+  </script>
 
-        <script id="bonify_template" type="text/x-handlebars-template">
-          <div class='center'>
+  <script id="bonify_template" type="text/x-handlebars-template">
+    <div class='center'>
             <h3> LETS GET BONIFIED!!! </h3>
             <p class="letter">{{currText}}</p>
             <p class="fontsize14">Your current score is: <span class='score'>{{score}}</span></p>
@@ -103,7 +102,7 @@
               <div>
                 <input type='text' id='guessInput' placeholder='input your guess here' autocomplete='off' autofocus autocorrect='off'></input>
               </div>
-              <button id='guess' name='guess' class='btn btn-primary'>Guess</button>
+              <button id='guess' name='guess' class='btn btn-primary gbutton'>Guess</button>
             </form>
             <p>
               <button value='Restart' id='goto_bonify' class='btn'>Restart</button>
@@ -113,11 +112,15 @@
                 <button class='btn'>Home</button>
               </a>
             </p>
-          </div>
-        </script>
+      <div class='xin'>
+        <span class='label'>Instructions:</span>
+        Click 'Get bonified?' to get started. This is a memory game where you have to remember the letters you already have typed while constantly added one more letter. <br/>
+      </div> 
+    </div>
+  </script>
 
 
-        <script id="gameover_template" type="text/x-handlebars-template">
+  <script id="gameover_template" type="text/x-handlebars-template">
           <div class='center'>
           <h3> GAMEOVER :( </h3>
             <p>
@@ -138,7 +141,7 @@
                 <input type='text' name='username' placeholder='username' autocomplete='off' autofocus /><br/>
               </div>
 
-              <button type='submit' class='btn btn-primary'>Add Highscore</button>
+              <button type='submit' class='btn btn-primary gbutton'>Add Highscore</button>
             </form>
             {{/score}}
             {{^score}} 
@@ -149,7 +152,7 @@
           </p>
             {{/score}}
           </div>
-        </script>
+  </script>
 
 
     <div class="container">
