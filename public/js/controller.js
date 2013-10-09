@@ -5,7 +5,7 @@ var makeid = function(){
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";//abcdefghijklmnopqrstuvwxyz0123456789";
     currText += possible.charAt(Math.floor(Math.random() * possible.length));
     text+=currText;
-    console.log(text);
+    //console.log(text);
 };
 
 var newGame = function(){
