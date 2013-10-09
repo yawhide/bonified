@@ -1,0 +1,25 @@
+
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+module.exports.mongoose = mongoose;
+module.exports.Schema = Schema;
+
+// Connect to cloud database
+
+var username = "stephan"; 
+var localUsername = "localhost";
+var password = "mongo"; 
+var localPassword = "27017";
+var address = '@ds047458.mongolab.com:47458/rememberalldb';
+var localAddress = "/rememberalldb";
+connect();
+// Connect to mongo
+function connect() {
+
+    var url0 = 'mongodb://' + username + ':' + password + address;
+    var url1 = 'mongodb://' + localUsername + ':' + localPassword + localAddress;
+
+    mongoose.connect(url0);
+}
+function disconnect() {mongoose.disconnect()}
+
