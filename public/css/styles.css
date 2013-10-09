@@ -1,5 +1,6 @@
 body{
     text-decoration: none;
+    background-color: #f4f4f4;
 }
 a{
     text-decoration: none
@@ -37,12 +38,24 @@ a:hover {
 .fontsize14{
 	font-size: 14pt;
 }
-
-@media only screen and (max-device-width: 800px) {
-/* define mobile specific styles come here */
-
- .btn {
-        max-width:80%;
-
- }
+.navbar-fixed-top .navbar .navbar-inner .brand{
+    text-align: center;
+    margin:auto;
+    float:none;
+    font-size: 20pt;
+    color:#f4f4f4;
 }
+.navbar-inner {
+  background-color: #4164a9; /* background color will be black for all browsers */
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+}
+/*
+.navbar .brand{  
+
+}
+
+        margin:auto;  
+    margin-left: auto;
+    margin-right: auto;*/
