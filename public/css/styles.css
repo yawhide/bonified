@@ -203,3 +203,7 @@ legend {
     width: 225px;
     -webkit-background-clip: padding-box;
 }
+
+.gbutton:active{
+    
+}
