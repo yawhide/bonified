@@ -15,7 +15,7 @@ a:hover {
 
 .center {
     margin-left: auto;
-    width: 50%;
+    width: 225px;
     margin-right: auto;
     text-align: center;
 }
@@ -170,4 +170,15 @@ a:hover {
     text-decoration: none;
     width: 225px;
     -webkit-background-clip: padding-box;
+}
+
+
+
+.input-prepend.input-block-level > input {
+  width: 100%;
+}
+
+.xin .label{
+    background-color: #4164a9;
+    font-size: 15px;
 }
