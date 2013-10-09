@@ -44,9 +44,8 @@ var HighScoreView = Backbone.View.extend({
         
     var source = $("#highscore_template").html();
     //var template = Handlebars.compile(source);
-    var template = Mustache.to_html(source);
-    var data = {"highscoreArray":highscoreArray};
-    that.$el.html(template, data).trigger('create');
+    var template = Mustache.to_html(source, {"highscoreArray":highscoreArray});
+    that.$el.html(template).trigger('create');
   },
       error: function(){
       console.log("Something failed here....");
