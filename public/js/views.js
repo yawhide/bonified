@@ -136,8 +136,7 @@ var BonifyView = Backbone.View.extend({
     if(guess != text){
         console.log("Your Score is: " + score);
         app_router.navigate("#/gameover", true);
-
-        }
+    }
     else{
         score+=1;
         currText = '';
@@ -145,7 +144,6 @@ var BonifyView = Backbone.View.extend({
         var source = $("#bonify_template").html();
         var template = Handlebars.compile(source);
         this.$el.html(template({"currText": currText, "score": score})).trigger('create');
-             
     }
    },
   startGame: function(){
