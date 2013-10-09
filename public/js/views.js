@@ -43,7 +43,6 @@ var HighScoreView = Backbone.View.extend({
         }
         
     var source = $("#highscore_template").html();
-    //var template = Handlebars.compile(source);
     var template = Mustache.to_html(source, {"highscoreArray":highscoreArray});
     that.$el.html(template).trigger('create');
   },
@@ -73,8 +72,8 @@ var HighScoreView = Backbone.View.extend({
         }
         
     var source = $("#highscore_template").html();
-    var template = Handlebars.compile(source);
-    that.$el.html(template({"highscoreArray":highscoreArray})).trigger('create');
+    var template = Mustache.to_html(source, {"highscoreArray":highscoreArray});
+    that.$el.html(template).trigger('create');
 
       },
       error: function(){
@@ -118,8 +117,8 @@ var GameoverView = Backbone.View.extend({
       score=null;
     }
     var source = $("#gameover_template").html();
-    var template = Handlebars.compile(source);
-    this.$el.html(template({"score":score})).trigger('create');
+    var template = Mustache.to_html(source,{"score":score});
+    this.$el.html(template).trigger('create');
   }
 });
 
@@ -141,8 +140,8 @@ var BonifyView = Backbone.View.extend({
         currText = '';
         makeid();
         var source = $("#bonify_template").html();
-        var template = Handlebars.compile(source);
-        this.$el.html(template({"currText": currText, "score": score})).trigger('create');
+        var template = Mustache.to_html(source,{"currText": currText, "score": score});
+        this.$el.html(template).trigger('create');
     }
    },
   startGame: function(){
@@ -151,6 +150,7 @@ var BonifyView = Backbone.View.extend({
   render: function(){
     newGame();
       var source = $("#bonify_template").html();
-      var template = Handlebars.compile(source);
-      this.$el.html(template({"currText": currText, "score": score})).trigger('create');  }
+        var template = Mustache.to_html(source,{"currText": currText, "score": score});
+        this.$el.html(template).trigger('create');
+         }
 });

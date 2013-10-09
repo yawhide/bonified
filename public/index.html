@@ -115,7 +115,7 @@
                 <button class='btn'>New game?</button>
               </a>
             </p>
-             {{#if score}}
+             {{#score}}
             <p>
               <a href='#/highscore'>
                 <button class='btn'>See if ya made it to the High Scores!</button>
@@ -130,13 +130,14 @@
 
               <button type='submit' class='btn btn-primary'>Add Highscore</button>
             </form>
-          {{else}}
-          <p>
+            {{/score}}
+            {{^score}} 
+                     <p>
             <a href='#/highscore'>
               <button class='btn'>Check out the High Scores!</button>
             </a>
           </p>
-          {{/if}}
+            {{/score}}
           </div>
         </script>
 
