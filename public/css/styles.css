@@ -156,3 +156,12 @@ legend {
 .fontsize14{
 	font-size: 14pt;
 }
+
+@media only screen and (max-device-width: 480px) {
+/* define mobile specific styles come here */
+
+ .btn btn-large{
+        max-width:20px;
+
+ }
+}
