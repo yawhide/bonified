@@ -18,7 +18,7 @@ var IndexView = Backbone.View.extend({
   el:'body > .container',
   render: function() {
     var source = $("#index_template").html();
-    var template = Handlebars.compile(source);
+    var template = Mustache.to_html(source);
     this.$el.html(template).trigger('create');
   }
 });
@@ -43,8 +43,10 @@ var HighScoreView = Backbone.View.extend({
         }
         
     var source = $("#highscore_template").html();
-    var template = Handlebars.compile(source);
-    that.$el.html(template({"highscoreArray":highscoreArray})).trigger('create');
+    //var template = Handlebars.compile(source);
+    var template = Mustache.to_html(source);
+    var data = {"highscoreArray":highscoreArray};
+    that.$el.html(template, data).trigger('create');
   },
       error: function(){
       console.log("Something failed here....");
