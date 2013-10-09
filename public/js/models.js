@@ -9,5 +9,5 @@ var SingleUser = Backbone.Model.extend({
 });
 
 var AddUser = Backbone.Model.extend({
-    url: '/signup'
+    url: '/addHighScore'
 });

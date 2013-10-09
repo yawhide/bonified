@@ -10,7 +10,6 @@
  , path = require('path')
  , User = require('./models/User.js')
  , fs = require('fs')
- , $ = require('jquery')
  , _ = require('underscore')
  , Backbone = require('backbone')
  , exphbs = require('express3-handlebars');
@@ -37,18 +36,14 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+
 app.get('/', function(req, res){
-    console.log(req.theScores);
-
     fs.readFile('./public/index.html', function(error, content){
-
-
         if(error){
             res.writeHead(500);
             res.end();
         }
         else{
-
             res.writeHead(200, { 'Content-Type': 'text/html'});
             res.end(content, 'utf-8');
         }
@@ -56,7 +51,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/getHighScores', function(req,res){
-   s
+
     User.getTopHighscore(function(err, collection){
         if(err != null){
             console.log("ERRORRRR!!!!");
@@ -68,6 +63,8 @@ app.get('/getHighScores', function(req,res){
         }
     });
 });
+
+
 
 app.post('/search', function(req, res){
 
@@ -86,12 +83,12 @@ app.post('/search', function(req, res){
      });
 });
 
-app.post('/signup', function(req, res) {
+app.post('/addHighScore', function(req, res) {
     var username = req.body.username;
     var highscore = req.body.highscore;
     console.log(highscore);
     User.addUser(username, highscore, function(err, user) {
-        if (err!=null) {   
+        if(err != null){   
             console.log(err);    
             res.send(err);
         }

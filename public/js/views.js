@@ -93,13 +93,14 @@ var GameoverView = Backbone.View.extend({
     'submit .addHS': 'addHS'
   },
   addHS: function(ev){
+    console.log("segdoggy");
     ev.preventDefault();
     var userDetails = $(ev.currentTarget).serializeObject();
     var username = userDetails.username;
     var highscore = score;
     var user = new AddUser();
     var newUserDetails = {"username": username, "highscore": highscore};
-    var that = this;
+    console.log(newUserDetails);
     user.save(newUserDetails, {
       success: function(){
         app_router.navigate("#/highscore", true);
