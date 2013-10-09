@@ -42,12 +42,12 @@
       <p>
         <a href='#/highscore'>
         
-          <button class='btn btn-large'>High Scores</button>
+          <button class='btn btn-large rbutton'>High Scores</button>
         </a>
       </p>
       <p>
         <a href='#/bonify'>
-          <button class='btn btn-large'>Get Bonified?</button>
+          <button class='btn btn-large rbutton'>Get Bonified?</button>
         </a>
       </p>
       <h4>Extras</h4>
@@ -73,7 +73,7 @@
             <button id='searchButton' value='Search!' class='btn btn-primary gbutton' >Search!</button>
           </form>
           <a href='#/bonify'>
-            <button class='btn'>New game?</button>
+            <button class='btn rbutton'>New game?</button>
           </a>
           <table class='table table-bordered table-striped table-condensed'>
             {{#highscoreArray}}
@@ -95,11 +95,11 @@
               <button id='guess' name='guess' class='btn btn-primary gbutton'>Guess</button>
             </form>
             <p>
-              <button value='Restart' id='goto_bonify' class='btn'>Restart</button>
+              <button value='Restart' id='goto_bonify' class='btn rbutton'>Restart</button>
             </p>
             <p>
               <a href=''>
-                <button class='btn'>Home</button>
+                <button class='btn rbutton'>Home</button>
               </a>
             </p>
       <div class='xin'>
@@ -115,13 +115,13 @@
           <h3> GAMEOVER :( </h3>
             <p>
               <a href='#/bonify'>
-                <button class='btn'>New game?</button>
+                <button class='btn rbutton'>New game?</button>
               </a>
             </p>
              {{#score}}
             <p>
               <a href='#/highscore'>
-                <button class='btn'>See if ya made it to the High Scores!</button>
+                <button class='btn rbutton'>See if ya made it to the High Scores!</button>
               </a>
             </p>
             <p>Your score is: {{score}}</p>
@@ -137,7 +137,7 @@
             {{^score}} 
                      <p>
             <a href='#/highscore'>
-              <button class='btn'>Check out the High Scores!</button>
+              <button class='btn rbutton'>Check out the High Scores!</button>
             </a>
           </p>
             {{/score}}
