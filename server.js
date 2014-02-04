@@ -122,6 +122,7 @@ app.post('/addHighScore', function(req, res) {
         }
         
     }); 
+    
 });
 
 /**
