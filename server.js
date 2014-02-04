@@ -22,7 +22,7 @@
  * app.set('port') => this line is where you can specify the port
     at which the app runs on.
 */
-app.set('port', process.env.PORT || 8000);
+//app.set('port', process.env.PORT || 8000);
 app.set('views', __dirname + '/views');
 app.engine('handlebars', exphbs({defaultLayout : 'main'}));
 app.set('view engine', 'handlebars');
