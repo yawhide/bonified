@@ -127,6 +127,9 @@ app.post('/addHighScore', function(req, res) {
 /**
  * Auto generated, starts the nodejs server
 */
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+// http.createServer(app).listen(app.get('port'), function(){
+//   console.log('Express server listening on port ' + app.get('port'));
+// });
+http.createServer(app).listen(process.env.OPENSHIFT_NODEJS_PORT || 8080,process.env.OPENSHIFT_NODEJS_IP, function () {
+	console.log("Express server listening on port  8080");
 });
