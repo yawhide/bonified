@@ -22,7 +22,7 @@
  * app.set('port') => this line is where you can specify the port
     at which the app runs on.
 */
-//app.set('port', process.env.PORT || 8000);
+app.set('port', process.env.PORT || 8000);
 app.set('views', __dirname + '/views');
 app.engine('handlebars', exphbs({defaultLayout : 'main'}));
 app.set('view engine', 'handlebars');
@@ -122,15 +122,11 @@ app.post('/addHighScore', function(req, res) {
         }
         
     }); 
-    
 });
 
 /**
  * Auto generated, starts the nodejs server
 */
-// http.createServer(app).listen(app.get('port'), function(){
-//   console.log('Express server listening on port ' + app.get('port'));
-// });
-http.createServer(app).listen(process.env.OPENSHIFT_NODEJS_PORT || 8080,process.env.OPENSHIFT_NODEJS_IP, function () {
-	console.log("Express server listening on port  8080");
+http.createServer(app).listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
 });
