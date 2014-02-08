@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 /**
  * this method serializes a form and returns an array with
     the contents of that form.
 */
+=======
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
 $.fn.serializeObject = function() {
   var o = {};
   var a = this.serializeArray();
@@ -18,24 +21,34 @@ $.fn.serializeObject = function() {
   return o;
 };
 
+<<<<<<< HEAD
 /**
  * Index view renders the home page into container in 
     the index.html
 */
+=======
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
 var IndexView = Backbone.View.extend({
   el:'body > .container',
   render: function() {
     var source = $("#index_template").html();
+<<<<<<< HEAD
     
+=======
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
     var template = Mustache.to_html(source);
     this.$el.html(template).trigger('create');
   }
 });
+<<<<<<< HEAD
 /**
  * HighScore View renders the high score page into container 
   in index.html
   This view Fetches the top 10 scores of the in our MongoDB
 */
+=======
+
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
 var HighScoreView = Backbone.View.extend({
   el:'body > .container',
   events: {
@@ -100,17 +113,24 @@ var HighScoreView = Backbone.View.extend({
   }
 });
 
+<<<<<<< HEAD
 /**
  * GameOver View renders the Game Over page into container 
   in index.html
    Grabs the user information and the high score and saves it to MondoDB
 */
+=======
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
 var GameoverView = Backbone.View.extend({
   el: 'body > .container',
   events: {
     'submit .addHS': 'addHS'
   },
   addHS: function(ev){
+<<<<<<< HEAD
+=======
+    console.log("segdoggy");
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
     ev.preventDefault();
     var userDetails = $(ev.currentTarget).serializeObject();
     var username = userDetails.username;
@@ -139,11 +159,14 @@ var GameoverView = Backbone.View.extend({
   }
 });
 
+<<<<<<< HEAD
 /**
  * Bonify View renders the Game page into container 
   in index.html
    Shows the game page and regenerates a new letter if needed
 */
+=======
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
 var BonifyView = Backbone.View.extend({
   el: 'body > .container',
   events:{

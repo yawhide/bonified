@@ -1,6 +1,7 @@
 var text = '';
 var currText = '';
 var score = 0;
+<<<<<<< HEAD
 /**
  * this method randomly generates whatever is in the possible variable,
     in this case its all the uppercase letters in the english alphabet
@@ -8,10 +9,13 @@ var score = 0;
     letter is and concatenates the currText onto text (making it 
     progressively longer)
 */
+=======
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
 var makeid = function(){
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";//abcdefghijklmnopqrstuvwxyz0123456789";
     currText += possible.charAt(Math.floor(Math.random() * possible.length));
     text+=currText;
+<<<<<<< HEAD
 };
 
 /**
@@ -19,12 +23,18 @@ var makeid = function(){
     calling makeid() to generate a new currText/text. It also sets 
     the score to 0.
 */
+=======
+    //console.log(text);
+};
+
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
 var newGame = function(){
     currText = '';
     text = '';
     makeid();
     score = 0;
 };
+<<<<<<< HEAD
 
 
 $(function(){
@@ -42,3 +52,5 @@ $(function(){
         $('input[name="write"]').val($('input[name="write"]').val() + character);
     });
 });
+=======
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e

@@ -1,11 +1,19 @@
 
 /**
  * Module dependencies.
+<<<<<<< HEAD
  * This is where we "require" all the necessary libraries
     and/or models that our node server needs.
  */
 
  var express = require('express')
+=======
+ */
+
+ var express = require('express')
+ , routes = require('./routes')
+ , user = require('./routes/user')
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
  , http = require('http')
  , path = require('path')
  , User = require('./models/User.js')
@@ -16,6 +24,7 @@
 
  var app = express();
 
+<<<<<<< HEAD
 /**
  * All the environments
  * This is all auto-generated
@@ -24,6 +33,14 @@
 */
 app.set('port', process.env.PORT || 8000);
 app.set('views', __dirname + '/views');
+=======
+//conf.ports.server;
+
+// all environments
+app.set('port', process.env.PORT || 3000);
+app.set('views', __dirname + '/views');
+//app.set('view engine', 'jade');
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
 app.engine('handlebars', exphbs({defaultLayout : 'main'}));
 app.set('view engine', 'handlebars');
 app.use(express.favicon());
@@ -38,10 +55,14 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+<<<<<<< HEAD
 /**
  * This method reads the index.html file in the public directory.
     if the current URL is the index page '/'.
 */
+=======
+
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
 app.get('/', function(req, res){
     fs.readFile('./public/index.html', function(error, content){
         if(error){
@@ -55,12 +76,15 @@ app.get('/', function(req, res){
     });
 });
 
+<<<<<<< HEAD
 /**
  * Sends the frontend the result of calling User.getTopHighscore
     which is a multi-layered JSON object 
  * User is a User model from the models/User.js file.
  * getTopHighscore is a mongoose method from the models folder.
 */
+=======
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
 app.get('/getHighScores', function(req,res){
 
     User.getTopHighscore(function(err, collection){
@@ -75,6 +99,7 @@ app.get('/getHighScores', function(req,res){
     });
 });
 
+<<<<<<< HEAD
 /**
  * Receives a username from the frontend and calls findOneHighscore
     to find all the highscores that specific uses has entered
@@ -83,6 +108,10 @@ app.get('/getHighScores', function(req,res){
  * User is a User model and findOneHighscore is a mongoose method,
     both are form the models/User.js file
 */
+=======
+
+
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
 app.post('/search', function(req, res){
 
     var username = req.body.username;
@@ -100,6 +129,7 @@ app.post('/search', function(req, res){
      });
 });
 
+<<<<<<< HEAD
 /**
  * Receives a username and a highscore from the frontend and calls
     addUser which posts those two pieces of info into the mongoDB
@@ -108,6 +138,8 @@ app.post('/search', function(req, res){
  * User is a User model and findOneHighscore is a mongoose method,
     both are form the models/User.js file
 */
+=======
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
 app.post('/addHighScore', function(req, res) {
     var username = req.body.username;
     var highscore = req.body.highscore;
@@ -124,9 +156,13 @@ app.post('/addHighScore', function(req, res) {
     }); 
 });
 
+<<<<<<< HEAD
 /**
  * Auto generated, starts the nodejs server
 */
+=======
+
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

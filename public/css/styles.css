@@ -16,7 +16,11 @@ a:hover {
 
 .center {
     margin-left: auto;
+<<<<<<< HEAD
     width: 280px;
+=======
+    width: 225px;
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
     margin-right: auto;
     text-align: center;
     margin-top:auto;
@@ -188,6 +192,7 @@ a:hover {
     background-color: #4164a9;
     font-size: 15px;
 }
+<<<<<<< HEAD
 
 * {
 margin: 0;
@@ -279,3 +284,5 @@ list-style: none;
         border-color: #e5e5e5;
         cursor: pointer;
         }
+=======
+>>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
