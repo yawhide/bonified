@@ -1,6 +1,5 @@
 rememberAll
 ===========
-<<<<<<< HEAD
 
 This app was built by Stefan and Darren Fall 2013
 
@@ -129,5 +128,3 @@ Tips/Troubles
 8. When trying to install the android apk on my phone, downloading
     the apk then transfering it to my phone, then installing it would give me a parse error. But if I use the qrcode, the app installed just fine.
 
-=======
->>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
