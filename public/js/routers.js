@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 /**
  * defining the backbone router which will look at the current URL and 
     call the appropriate view method.
 */
-=======
->>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
 var Router = Backbone.Router.extend({
     routes:{
         "":"index",
@@ -14,14 +11,10 @@ var Router = Backbone.Router.extend({
     }
  });
  
-<<<<<<< HEAD
 /* 
  * START ROUTER, this will just instantiate all the views so we can
     call their functions as well as the router.
 */
-=======
-/* START ROUTER */
->>>>>>> 9576c7986b39f203e28a72d0770dca1c6a12984e
 var index = new IndexView();
 var highscore = new HighScoreView();
 var gameover = new GameoverView();

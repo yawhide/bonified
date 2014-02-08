@@ -11,6 +11,7 @@
     "mongoose": "3.6.20",
     "underscore": "1.5.2",
     "backbone" : "1.0.0",
-    "express3-handlebars": "latest"
+    "express3-handlebars": "latest",
+    "mongoose-validator": "*"
   }
 }
